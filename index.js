@@ -23,7 +23,6 @@ connection.connect(function (err) {
 
 
 
-
 // Inquirer Prompt
 
 function start() {
@@ -35,6 +34,11 @@ function start() {
             "Add Employee",
             "Add Role",
             "Add Department",
+            "View All Employees",
+            "View All Employees by Departments",
+            "View All Employees by Manager",
+            "View All Roles",
+            "View All Departments",
             "QUIT"
         ]
     })
@@ -44,13 +48,33 @@ function start() {
             case "Add Employee":
                 add.addEmployee(connection, start);
                 break;
-            
+
             case "Add Employee":
                 add.addRole(connection, start);
                 break;
-            
+
             case "Add Employee":
                 add.addRole(connection, start);
+                break;
+
+            case "View All Employees":
+                view.viewAllEmployees(connection, start);
+                break;
+
+            case "View All Employees by Departments":
+                view.viewAllEmployees(connection, start);
+                break;
+
+            case "View All Employees by Manager":
+                view.viewAllEmployees(connection, start);
+                break;
+
+            case "View All Roles":
+                view.viewAllEmployees(connection, start);
+                break;
+
+            case "View All Departments":
+                view.viewAllEmployees(connection, start);
                 break;
 
             case "QUIT":
@@ -60,7 +84,7 @@ function start() {
     })
 }
 
-// Title Art
+// // Title Art
 // figlet('CMS Employee Tracker', function(err, data) {
 //     if (err) {
 //         console.log('Something went wrong...');
