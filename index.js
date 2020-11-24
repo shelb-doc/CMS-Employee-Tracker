@@ -41,6 +41,9 @@ function start() {
             "View All Departments",
             "Update Employee Role",
             "Update Employee Manager",
+            "Remove Employee",
+            "Remove Role",
+            "Remove Department",
             "QUIT"
         ]
     })
@@ -85,6 +88,18 @@ function start() {
 
             case "Update Employee Manager":
                 update.updateManager(connection, start);
+                break;
+
+            case "Remove Employee":
+                update.removeEmployee(connection, start);
+                break;
+
+            case "Remove Role":
+                update.removeEmployee(connection, start);
+                break;
+
+            case "Remove Department":
+                update.removeEmployee(connection, start);
                 break;
 
             case "QUIT":
