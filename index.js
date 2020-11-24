@@ -39,6 +39,8 @@ function start() {
             "View All Employees by Manager",
             "View All Roles",
             "View All Departments",
+            "Update Employee Role",
+            "Update Employee Manager",
             "QUIT"
         ]
     })
@@ -75,6 +77,14 @@ function start() {
 
             case "View All Departments":
                 view.viewAllEmployees(connection, start);
+                break;
+
+            case "Update Employee Role":
+                update.updateRole(connection, start);
+                break;
+
+            case "Update Employee Manager":
+                update.updateManager(connection, start);
                 break;
 
             case "QUIT":
