@@ -54,12 +54,12 @@ function start() {
                 add.addEmployee(connection, start);
                 break;
 
-            case "Add Employee":
+            case "Add Role":
                 add.addRole(connection, start);
                 break;
 
-            case "Add Employee":
-                add.addRole(connection, start);
+            case "Add Department":
+                add.addDepartment(connection, start);
                 break;
 
             case "View All Employees":
@@ -67,19 +67,19 @@ function start() {
                 break;
 
             case "View All Employees by Departments":
-                view.viewAllEmployees(connection, start);
+                view.viewAllEmployeeDept(connection, start);
                 break;
 
             case "View All Employees by Manager":
-                view.viewAllEmployees(connection, start);
+                view.viewAllEmployeeMgr(connection, start);
                 break;
 
             case "View All Roles":
-                view.viewAllEmployees(connection, start);
+                view.viewRoles(connection, start);
                 break;
 
             case "View All Departments":
-                view.viewAllEmployees(connection, start);
+                view.viewDepartments(connection, start);
                 break;
 
             case "Update Employee Role":
@@ -95,11 +95,11 @@ function start() {
                 break;
 
             case "Remove Role":
-                update.removeEmployee(connection, start);
+                update.removeRole(connection, start);
                 break;
 
             case "Remove Department":
-                update.removeEmployee(connection, start);
+                update.removeDepartment(connection, start);
                 break;
 
             case "QUIT":
