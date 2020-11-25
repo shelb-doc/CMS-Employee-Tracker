@@ -9,7 +9,7 @@ function viewAllEmployees(connection, cb) {
     });
 };
 
-function viewEmployeeDept(connection, cb) {
+function viewAllEmployeeDept(connection, cb) {
     // Query the database for all available departments to prompt user
     connection.query("SELECT * FROM department", function (err, results) {
         if (err) throw err;
@@ -41,7 +41,9 @@ function viewEmployeeDept(connection, cb) {
 };
 
 
-function viewEmployeeMgr(connection, cb) {
+
+
+function viewAllEmployeeMgr(connection, cb) {
     // Query the database for all distinct managers from employee table
     connection.query("SELECT DISTINCT e2.first_name, e2.last_name FROM employee LEFT JOIN employee AS e2 ON employee.manager_id = e2.id WHERE e2.first_name IS NOT NULL", function (err, results) {
         if (err) throw err;
@@ -94,8 +96,8 @@ function viewDepartments (connection, cb) {
 
 module.exports = {
     viewAllEmployees: viewAllEmployees,
-    viewEmployeeDept: viewEmployeeDept,
-    viewEmployeeMgr: viewEmployeeMgr,
+    viewAllEmployeeDept: viewAllEmployeeDept,
+    viewAllEmployeeMgr: viewAllEmployeeMgr,
     viewRoles: viewRoles,
     viewDepartments: viewDepartments
 };

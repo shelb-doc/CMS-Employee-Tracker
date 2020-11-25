@@ -8,6 +8,7 @@ const figlet = require('figlet');
 // Internal Modules
 const add = require('./utils/add.js');
 const view = require('./utils/view.js');
+const update = require('./utils/update.js');
 
 const connection = mysql.createConnection({
     host: "localhost",
