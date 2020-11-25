@@ -10,6 +10,18 @@ const add = require('./utils/add.js');
 const view = require('./utils/view.js');
 const update = require('./utils/update.js');
 
+// Title Art
+figlet('CMS Employee Tracker', function(err, data) {
+    if (err) {
+        console.log('Something went wrong...');
+        console.dir(err);
+        return;
+    }
+    console.log(data)
+});
+
+
+
 const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
@@ -20,7 +32,15 @@ const connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) throw err;
+    // Title Art
+figlet('CMS Employee Tracker', function(err, data) {
+    if (err) {
+        console.log('Something went wrong...');
+        console.dir(err);
+        return;
+    }
     start();
+});
 });
 
 
@@ -111,12 +131,3 @@ function start() {
     })
 }
 
-// Title Art
-figlet('CMS Employee Tracker', function(err, data) {
-    if (err) {
-        console.log('Something went wrong...');
-        console.dir(err);
-        return;
-    }
-    console.log(data)
-});
