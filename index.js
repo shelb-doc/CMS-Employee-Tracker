@@ -6,7 +6,7 @@ const inquirer = require('inquirer');
 const figlet = require('figlet');
 
 // Internal Modules
-
+const add = require('./utils/add.js');
 
 const connection = mysql.createConnection({
     host: "localhost",
